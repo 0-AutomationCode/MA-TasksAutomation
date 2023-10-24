@@ -97,12 +97,6 @@ const repos = {
       W02D01_Scopes: "YES",
     },
   },
-  A09_Deyaa: {
-    displayName: "A09_Deyaa",
-    githubORG: "C9-deyaaaldeen",
-    githubUsername: "deyaaaldeen",
-    repos: { W02D03_Objects: "NO" },
-  },
   A10_Hadeel: {
     displayName: "A10_Hadeel",
     githubORG: "C9-hadeelHazimeh",
@@ -217,12 +211,6 @@ const repos = {
       W03D02_Iteration_P2: "YES",
     },
   },
-  A18_Sondos: {
-    displayName: "A18_Sondos",
-    githubORG: "C9-SondosAlrifae",
-    githubUsername: "SondosAlrifae",
-    repos: {},
-  },
   A19_YousefA: {
     displayName: "A19_YousefA",
     githubORG: "C9-usfaql",
@@ -316,6 +304,8 @@ const repos = {
       W02D02_Arrays: "YES",
       W02D01_Scopes: "YES",
       W02D02_Arrayss: "YES",
+      "W02D03-Objects": "YES",
+      W03D01_Iteration_P1: "YES",
     },
   },
   B08_Zebdieh: {
@@ -480,6 +470,7 @@ const repos = {
       W02D01_Scopes: "YES",
       W02D02_Arrays: "YES",
       W02D03_Objects: "YES",
+      W03D01_Iteration_P1: "YES",
     },
   },
   G02_Sammour: {
@@ -550,18 +541,6 @@ const repos = {
       W02D03_Objects: "YES",
       W03D01_Iteration_P1: "YES",
     },
-  },
-  G08_Mahmoud: {
-    displayName: "G08_Mahmoud",
-    githubORG: "C9-mahmoudqazan",
-    githubUsername: "mahmoudqazan",
-    repos: {},
-  },
-  G09_AbdAlRahman: {
-    displayName: "G09_AbdAlRahman",
-    githubORG: "C9-mohamadabdalrahman",
-    githubUsername: "mohamadabdalrahman",
-    repos: { W01D01_Intro_To_JS: "YES" },
   },
   G10_Mostafa: {
     displayName: "G10_Mostafa",

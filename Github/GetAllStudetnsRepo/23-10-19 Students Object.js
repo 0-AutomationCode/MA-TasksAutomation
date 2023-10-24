@@ -220,7 +220,7 @@ const allStudentsV02 = {
     githubUsername: "Majdialgaleed",
   },
   G07_Maryam: {
-    displayName: "G07_Maryam",
+    displayName: "fv_Maryam",
     githubORG: "C9-maryamabudarii",
     githubUsername: "maryamabudarii",
   },
@@ -281,4 +281,4 @@ allStudentsV01.forEach((e)=>{
 })
 */
 
-module.exports={data:allStudentsV02}
+module.exports = { data: allStudentsV02 };

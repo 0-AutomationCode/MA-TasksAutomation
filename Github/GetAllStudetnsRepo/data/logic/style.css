@@ -60,3 +60,17 @@ td.multipleLine {
   display: flex;
   flex-direction: column;
 }
+
+
+/* Freeze first row & first two Column */
+thead th {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+}
+
+tbody th {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  left: 0;
+}

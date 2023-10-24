@@ -302,5 +302,3 @@ const initTable = (columnTitles = defaultColumnTitles) => {
 };
 
 initTable();
-
-

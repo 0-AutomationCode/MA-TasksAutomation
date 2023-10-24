@@ -6,11 +6,11 @@ const moment = require("moment");
 const app = express();
 app.use(express.json());
 
-const allStudentsObj = require("./data/23-10-19 Students Object").data;
+const allStudentsObj = require("./23-10-19 Students Object").data;
 const repos = require("./data/logic/dataTest").data;
 /* ============================ */
 const GITHUB_API = "https://api.github.com";
-const OLD_TOKEN = "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";
+const OLD_TOKEN = "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";
 
 // ! =========== GET ALL REPOS =================
 const getAllRepoForOneStudent = async (student, token = OLD_TOKEN) => {
@@ -129,13 +129,16 @@ const getTodayDate = () => {
 // remove from `allStudents` quit students
 const quitStudents = [
   "A05_Anas",
+  "A09_Deyaa",
   "A18_Sondos",
+
   "B05_IbraheemS",
   "B14_Sameer",
   "B16_Tariq",
-  "G07_Maryam",
+
   "G07_Maryam",
   "G08_Mahmoud",
+  "G09_AbdAlRahman",
   "G11_Mousa",
 ];
 
