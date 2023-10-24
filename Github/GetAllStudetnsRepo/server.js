@@ -80,7 +80,6 @@ app.get("/createDataFile", (req, res) => {
     `
   // const repos=${allStudentsObj}
   const repos=${JSON.stringify(allStudentsObj)}
-  module.exports = { data: repos }; 
   `,
     function (err) {
       if (err) throw err;
@@ -96,7 +95,7 @@ app.get("/createDataFile", (req, res) => {
 
 app.get("/showDatabase", (req, res) => {
   lastFileCreated = getTodayDate();
-  const entireData = require(`./data/${lastFileCreated}.js`).data;
+  const entireData = require(`./data/DONE/${lastFileCreated}.js`).data;
 
   console.log("GET /");
   res.json(entireData);

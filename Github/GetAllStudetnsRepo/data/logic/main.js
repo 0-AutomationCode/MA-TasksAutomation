@@ -176,10 +176,12 @@ fillTableWithDataForOneStudents = (studentObj, columnTitlesArgument2) => {
   // Check the repo status
   $.each(columnTitlesArgument2, function (index, colTitle) {
     // console.log(colTitle);
+
     if (colTitle == DISPLAY_NAME_TITLE) {
+      // HERE - DISPLAY_NAME
       // console.log("DDDDDD", displayName);
 
-      newtr.append(`<td >${displayName}</td>`);
+      newtr.append(`<td>${displayName}</td>`);
 
       newtr.append(
         `<td>${`<a href="${GITHUB_URL}/${githubORG}" target="_blank">${githubORG}</a>`}</td>`
@@ -187,6 +189,7 @@ fillTableWithDataForOneStudents = (studentObj, columnTitlesArgument2) => {
 
       // console.log(newtr[0]);
     } else if (colTitle == LEFT_REPOS_TITLE) {
+      // HERE - LEFT_REPOS
       let finalResult = [];
       // let finalResultStatus = [];
 
@@ -208,12 +211,13 @@ fillTableWithDataForOneStudents = (studentObj, columnTitlesArgument2) => {
         }</td>`
       );
       newtr.append(
-        `<td class="${finalResult.length == 0 && "notApplicable"}">${
-          finalResult.length
-        }
+        `<td class="center_text ${
+          finalResult.length == 0 && "notApplicable"
+        }">${finalResult.length}
         </td>`
       );
     } else {
+      // HERE - REPOS Status
       let isRepoExist = "404";
       let isRepoPrivate = "N/A";
 
@@ -223,16 +227,16 @@ fillTableWithDataForOneStudents = (studentObj, columnTitlesArgument2) => {
         delete leftRepos[colTitle];
       }
       newtr.append(
-        `<td class='${
+        `<td class="center_text ${
           isRepoExist == "EXIST" ? "exist" : "notExist"
-        }'>${isRepoExist}</td>`
+        }">${isRepoExist == "EXIST" ? "" : isRepoExist}</td>`
       );
       newtr.append(
-        `<td class='${
+        `<td class="center_text ${
           (isRepoPrivate == "YES" && "private") ||
           (isRepoPrivate == "NO" && "public") ||
           (isRepoPrivate == "N/A" && "notApplicable")
-        }'>${isRepoPrivate}</td>`
+        }">${isRepoPrivate == "YES" ? "" : isRepoPrivate}</td>`
       );
     }
   });

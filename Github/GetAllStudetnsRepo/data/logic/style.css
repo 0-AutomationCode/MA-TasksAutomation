@@ -61,7 +61,9 @@ td.multipleLine {
   flex-direction: column;
 }
 
-
+.center_text{
+  text-align: center;
+}
 /* Freeze first row & first two Column */
 thead th {
   position: -webkit-sticky; /* for Safari */
