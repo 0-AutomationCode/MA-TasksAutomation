@@ -22,7 +22,8 @@ Addition Style
   font-weight: bold;
 }
 
-#selectStage, #selectWeekNumber {
+#selectStage,
+#selectWeekNumber {
   /* width: 200px; */
   font-size: 24px;
 }
@@ -61,7 +62,7 @@ td.multipleLine {
   flex-direction: column;
 }
 
-.center_text{
+.center_text {
   text-align: center;
 }
 /* Freeze first row & first two Column */
