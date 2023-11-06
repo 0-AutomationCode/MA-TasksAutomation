@@ -1,4 +1,9 @@
+// console.log("main.js");
+
+let typeOFMessages = "Normal Chat";
+
 const mainDiv = $("#pane-side");
+// const mainDiv = $("#side");
 
 const entireChat = mainDiv.children().children().children().children();
 
@@ -7,7 +12,11 @@ let allNewMessagesNumbers = "";
 const allNewMessages = entireChat.map((i, oneChat) => {
   // console.log(oneChat);
   const [phoneNumber, time] = $(
-    $($(oneChat).children().children().children().children()[1]).children()[0]
+    $(
+      $(oneChat).children().children().children().children()[
+        typeOFMessages == "Label" ? 2 : 1
+      ]
+    ).children()[0]
   ).children();
   const phoneNumberArray = $(phoneNumber).text().split(" ");
   timeText = $(time).text();

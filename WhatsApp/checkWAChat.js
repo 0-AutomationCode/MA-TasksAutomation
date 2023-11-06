@@ -23,8 +23,7 @@ const allNewMessages = entireChat.map((i, oneChat) => {
     // console.log(phoneNumberArray);
     phoneNumberText = phoneNumberArray.join("").split("\n").join("").slice(1);
   }
-  allNewMessagesNumbers =
-    allNewMessagesNumbers + "\n" +phoneNumberText
+  allNewMessagesNumbers = allNewMessagesNumbers + "\n" + phoneNumberText;
 
   phoneNumberText = phoneNumberText;
   const newMessage = {
