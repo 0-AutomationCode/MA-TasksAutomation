@@ -6,11 +6,11 @@ const moment = require("moment");
 const app = express();
 app.use(express.json());
 
-const allStudentsObj = require("./23-10-19 Students Object").data;
+const allStudentsObj = require("./../C11/Data/data2").data;
 const repos = require("./data/logic/dataTest").data;
 /* ============================ */
 const GITHUB_API = "https://api.github.com";
-const OLD_TOKEN = "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";
+const OLD_TOKEN = "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";
 
 // ! =========== GET ALL REPOS =================
 const getAllRepoForOneStudent = async (student, token = OLD_TOKEN) => {
