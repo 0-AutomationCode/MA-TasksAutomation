@@ -10,8 +10,13 @@ const allStudentsObj = require("./../C11/Data/data2").data;
 const repos = require("./data/logic/dataTest").data;
 /* ============================ */
 const GITHUB_API = "https://api.github.com";
+<<<<<<< HEAD:C11-CheckStudentsRepos/GetAllStudetnsRepo/server.js
+const OLD_TOKEN = "asdasdghp_04NJghy";
+let TESTING_MODE = false;
+=======
 const OLD_TOKEN = "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";
 
+>>>>>>> parent of ae6a504 (re do 2024-3-21):C10-CheckStudentsRepos/GetAllStudetnsRepo/server.js
 // ! =========== GET ALL REPOS =================
 const getAllRepoForOneStudent = async (student, token = OLD_TOKEN) => {
   var options = {
