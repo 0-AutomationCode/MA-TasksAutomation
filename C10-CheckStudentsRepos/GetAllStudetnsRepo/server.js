@@ -10,13 +10,8 @@ const allStudentsObj = require("./../C11/Data/data2").data;
 const repos = require("./data/logic/dataTest").data;
 /* ============================ */
 const GITHUB_API = "https://api.github.com";
-<<<<<<< HEAD:C11-CheckStudentsRepos/GetAllStudetnsRepo/server.js
 const OLD_TOKEN = "asdasdghp_04NJghy";
 let TESTING_MODE = false;
-=======
-const OLD_TOKEN = "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";
-
->>>>>>> parent of ae6a504 (re do 2024-3-21):C10-CheckStudentsRepos/GetAllStudetnsRepo/server.js
 // ! =========== GET ALL REPOS =================
 const getAllRepoForOneStudent = async (student, token = OLD_TOKEN) => {
   var options = {
@@ -32,6 +27,8 @@ const getAllRepoForOneStudent = async (student, token = OLD_TOKEN) => {
     .get(endpoint, options)
     .then((response) => {
       const resultObj = {};
+
+      TESTING_MODE && console.log(TESTING_MODE, response.data);
 
       response.data.forEach((e, i) => {
         const { name, private } = e;
@@ -58,21 +55,20 @@ const getAllRepoForAllStudents = (obj) => {
     getAllRepoForOneStudent(obj[student]);
   }
 };
-// getAllRepoForAllStudents(allStudents);
-// getAllRepoForOneStudent(allStudents.A01_Shishani);
-// getAllRepoForOneStudent(allStudents.A02_Khraim);
-// console.log(allStudents);
 
 // TODO ============================
-
+app.get("/getAllReposForOne", (req, res) => {
+  // const newToken = req.query.token;
+  // console.log(req.query.token);
+  getAllRepoForOneStudent(allStudentsObj.B01_Moharib);
+  res.json(allStudentsObj);
+});
 app.get("/getAllRepos", (req, res) => {
   // const newToken = req.query.token;
   // console.log(req.query.token);
   getAllRepoForAllStudents(allStudentsObj);
   res.json(allStudentsObj);
 });
-
-// getAllRepoForOneStudent(allStudentsObj.A01_Shishani);
 
 // !- important ============================
 
@@ -149,7 +145,13 @@ const quitStudents = [
 quitStudents.forEach((studentDisplayName, i) => {
   delete allStudentsObj[studentDisplayName];
 });
-console.log(allStudentsObj);
+
+// Logs
+// console.log(allStudentsObj);
+TESTING_MODE = true;
+getAllRepoForOneStudent(allStudentsObj.B01_Moharib);
+// getAllRepoForAllStudents(allStudentsObj);
+// console.log(allStudentsObj);
 
 /* ============================ */
 
