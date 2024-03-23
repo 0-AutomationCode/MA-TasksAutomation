@@ -10,7 +10,7 @@ const allStudentsObj = require("./../C11/Data/data2").data;
 const repos = require("./data/logic/dataTest").data;
 /* ============================ */
 const GITHUB_API = "https://api.github.com";
-const OLD_TOKEN = "asdasdghp_04NJghy";
+const OLD_TOKEN = "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";
 let TESTING_MODE = false;
 // ! =========== GET ALL REPOS =================
 const getAllRepoForOneStudent = async (student, token = OLD_TOKEN) => {
